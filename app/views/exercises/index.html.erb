@@ -1,6 +1,4 @@
-<div class = "taitol">
-  <a href = "/" >dieter</a>
-</div>
+<%= render "shared/header" %>
 
 <div>
   <%= render "head" %>
@@ -34,15 +32,15 @@
 
 <div class = "menu">
   <div class="in-menu">
-    <a href="#">体重入力</a>
+    <%= link_to(new_health_path) do %>体重入力<% end %>
   </div>
 
   <div class="in-menu">
-    <a href="#">運動入力</a>
+    <%= link_to(new_exercise_path) do %>運動入力<% end %>
   </div>
 
   <div class="in-menu">
-    <a href="#">食事入力</a>
+    <%= link_to(new_meal_path) do %>食事入力<% end %>
   </div>
 
 </div>

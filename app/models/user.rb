@@ -13,6 +13,9 @@ class User < ApplicationRecord
     validates :habit_id
   end
 
+  has_many :meals
+  has_many :healths
+  has_many :exercises
   belongs_to :habit
   belongs_to :sex
 end
