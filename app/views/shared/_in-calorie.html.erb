@@ -1,0 +1,12 @@
+<div class = "calorie">
+  <%  kal = 0 %>
+  <% @meals.each do |meal| %>
+    <% if Date.current.strftime('%Y/%m/%d') == meal.created_at.strftime('%Y/%m/%d') %>
+      <%  kal += meal.calorie %>
+    <% end %>
+  <% end %>
+  <%= kal %>
+  <div calss = kal>
+    kal
+  </div>
+</div>

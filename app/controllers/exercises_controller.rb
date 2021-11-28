@@ -1,6 +1,7 @@
 class ExercisesController < ApplicationController
 
   def index
+    @exercises = Exercise.all
     @healths = Health.all
     @meals = Meal.all
   end
