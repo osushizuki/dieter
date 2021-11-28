@@ -1,0 +1,56 @@
+
+<%= render "shared/header" %>
+
+<div class="item-show">
+  <div class="item-box">
+
+    <div class="item-img-content">
+      <%#= image_tag @item.image ,class:"item-box-img" %>
+    </div>
+
+    <div class="item-explain-box">
+      <span><%#= @item.explanation %></span>
+    </div>
+
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">ニックネーム</th>
+          <td class="detail-value">
+            <%= current_user.nick_name %>
+          </td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">登録時体重</th>
+          <td class="detail-value">
+            <%= current_user.weight %>
+          </td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">身長</th>
+          <td class="detail-value">
+            <%= current_user.height %>
+          </td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">年齢</th>
+          <td class="detail-value">
+            <%= current_user.age %>
+          </td>
+        </tr>
+
+        <tr>
+          <th class="detail-item">運動習慣</th>
+          <td class="detail-value">
+            <%= current_user.habit.name %>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+    <%= link_to "プロフィール変更", edit_user_path, method: :get, class: "item-red-btn" %>
+  </div>
+</div>
