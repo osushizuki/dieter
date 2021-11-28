@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "exercises#index"
-  resources :users, only: [ :edit, :update]
+  resources :users, only: [ :edit, :update, :show]
   resources :exercises, only: [:index, :new, :create]
   resources :meals, only: [:new, :create]
   resources :healths, only: [:new, :create]

@@ -4,19 +4,26 @@
   <%= render "head" %>
 </div>
 
-<div class = "total-calorie">
-  <div class = "in-calorie">
-    摂取カロリー
+<div class = "center">
+  <div class = "total-calorie">
+    <div class = "in-calorie">
+      摂取カロリー
+    </div>
+
+    <div class = "out-calorie">
+      消費カロリー
+    </div>
   </div>
 
-  <div class = "out-calorie">
-    消費カロリー
+  <div class = "total-calorie">
+    <%= render "shared/in-calorie" %>
+    <%= render "shared/out-calorie" %>
   </div>
-</div>
 
-<div class = "total-calorie">
-  <%= render "shared/in-calorie" %>
-  <%= render "shared/out-calorie" %>
+  <div class = "calorie-show">
+    <%= render "shared/today-eat" %>
+    <%= render "shared/today-exercise" %>
+  </div>
 </div>
 
 <div class = "menu">

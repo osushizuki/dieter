@@ -1,0 +1,24 @@
+<%  kal = 0 %>
+<% @exercises.each do |exercise| %>
+  <% if Date.current.strftime('%Y/%m/%d') == exercise.created_at.strftime('%Y/%m/%d') %>
+    <% if exercise.menu_id == 2 %>
+      <% kal += 3 * current_user.weight * (exercise.time / 60) *1.05 %>
+    <% elsif exercise.menu_id == 3 %>
+      <% kal += 6 * current_user.weight * (exercise.time / 60) *1.05 %>
+    <% elsif exercise.menu_id == 4 %>
+      <% kal += 9 * current_user.weight * (exercise.time / 60) *1.05 %>
+    <% elsif exercise.menu_id == 5 %>
+      <% kal += 6 * current_user.weight * (exercise.time / 60) *1.05 %>
+    <% elsif exercise.menu_id == 5 %>
+      <% kal += 8.3 * current_user.weight * (exercise.time / 60) *1.05 %>
+    <% end %>
+  <%end %>
+<% end %>
+
+<% if current_user.sex_id = 2%>
+  <% calorie = (13.397 * current_user.weight) + (4.799 * current_user.height) - (5.677 * current_user.age) + 88.362 %>
+  <%= (calorie + kal).floor(0) %>
+<% elsif current_user.sex_id = 3%>
+  <% calorie = (9.247 * current_user.weight) + (3.098 * current_user.height) - (4.33 * current_user.age) + 447.593 %>
+  <%= (calorie + kal).floor(0) %>
+<% end %>

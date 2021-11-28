@@ -1,0 +1,25 @@
+<div class = "in-calorie-show">
+  基礎代謝
+  <%= render "shared/math-calorie" %>kal
+  <% @exercises.each do |exercise| %>
+    <% if Date.current.strftime('%Y/%m/%d') == exercise.created_at.strftime('%Y/%m/%d') %>
+    <%  kal = 0 %>
+      <% if exercise.menu_id = 2 %>
+        <% kal += 3 * current_user.weight * exercise.time * 1.05 %>
+      <% elsif exercise.menu_id = 3 %>
+        <% kal += 6 * current_user.weight * (exercise.time / 60) *1.05 %>
+      <% elsif exercise.menu_id = 4 %>
+        <% kal += 9 * current_user.weight * (exercise.time / 60) *1.05 %>
+      <% elsif exercise.menu_id = 5 %>
+        <% kal += 6 * current_user.weight * (exercise.time / 60) *1.05 %>
+      <% elsif exercise.menu_id = 5 %>
+        <% kal += 8.3 * current_user.weight * (exercise.time / 60) *1.05 %>
+      <% end %>
+      <h3>
+        <%= exercise.menu.name %>
+          <%= (kal / 60).floor(0) %>kal
+      </h3>
+    <% end %>
+    
+  <% end %>
+</div>
