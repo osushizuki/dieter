@@ -1,0 +1,47 @@
+
+.taitol {
+  font-size: 40px;
+  text-align: center
+}
+
+.header {
+  display: flex;
+}
+
+.header-name a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.total-calorie {
+  display: flex;
+  justify-content: space-around;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.in-calorie {
+  color: #00FF00;
+}
+
+.out-calorie {
+  color:red;
+}
+
+.calorie {
+  display: flex;
+  font-size: 40px;
+
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+}
+
+.in-menu a {
+  border: 3px solid lightblue;
+  padding: 14px;
+  text-decoration: none;
+}
