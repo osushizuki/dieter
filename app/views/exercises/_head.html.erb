@@ -1,0 +1,14 @@
+<div class="header">
+  <% if user_signed_in? %>
+    <%= link_to current_user.nick_name, "/users/#{current_user.id}", class: "header-name" %>
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delet,class: "header-name" %>
+  <% else %>
+    <div class="header-name">
+      <a href= new_user_session_path>ログイン</a>
+    </div>
+
+    <div class="header-name">
+      <a href = new_user_registration_path>新規登録</a>
+    </div>
+  <% end %>
+</div>
