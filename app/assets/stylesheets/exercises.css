@@ -33,7 +33,7 @@
 }
 
 .in-calorie-show {
-  text-align: center 
+  text-align: center ;
   border: 1px solid #000;
   overflow-y: scroll; 
   width: 40%;
