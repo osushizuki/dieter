@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    
+    @health = Health.all
   end
 
   private
